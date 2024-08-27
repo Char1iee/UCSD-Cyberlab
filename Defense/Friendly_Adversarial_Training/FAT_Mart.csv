@@ -1,0 +1,2 @@
+model,attack_model,epsilon,Accuracy,Macro Precision,Weighted Precision,Macro Recall,Weighted Recall,Macro F1,Weighted F1,TPR,FNR,TNR,FPR
+,,,,,,,,,,,,,
