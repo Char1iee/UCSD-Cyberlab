@@ -1,0 +1,19 @@
+name: Bug report
+description: Create a report to help us improve
+title: "[BUG]"
+labels: bug
+body:
+- type: textarea
+  attributes:
+    label: ✨ Short description of the bug [tl;dr]
+    description: >
+      A description of what the bug is _within three sentences_.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: 💬 Detailed code and results
+    description: >
+      Please paste or describe the codes and results you observe.
+  validations:
+    required: true

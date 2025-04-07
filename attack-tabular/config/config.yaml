@@ -1,0 +1,21 @@
+defaults:
+  - _self_
+  - data: adult  # dataset to run on
+  - ml_model:  mlp  # model to attack
+  - attack: cafa  # attack to run
+  - constraints: dcs  # constraints to use; if not shown we don't integrate constraints, which also means we skip projection.
+
+
+# General config:
+n_samples_to_attack: 1500  # number of samples to attack
+data_split_to_attack: test  # data split to attack
+save_attack_artifacts: True  # whether to save the attack artifacts or not.  # TODO
+
+# Stages to execute or skip (by loading existing artifacts):
+perform_training: False  # whether to re-execute training or not.
+perform_training_grid_search_hparams: False  # whether to re-execute grid search or not.
+perform_constraints_mining: False  # whether to re-execute the constraints mining or not.
+perform_constraints_ranking: False  # whether to re-execute the evaluation and ranking of the constraints or not.
+perform_constraints_soundness_evaluation: False  # TODO here?  # whether to re-execute the soundness evaluation of the constraints or not.
+perform_attack: True  # whether to execute the attack or not. debugging purposes only. TODO DISCARD ME?
+perform_projection: True  # if False, we skips projection.

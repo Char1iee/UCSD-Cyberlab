@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest an idea for this project
+title: "[FEATURE]"
+labels: enhancement
+body:
+- type: textarea
+  attributes:
+    label: ✨ Short description of the feature [tl;dr]
+    description: >
+      A description of what the bug is _within three sentences_.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: 💬 Detailed motivation and codes
+    description: >
+      Please outline the motivation and codes for the proposal.
+  validations:
+    required: true

@@ -1,0 +1,22 @@
+name: bank
+
+
+# Dataset parameters:
+params:
+  dataset_name: ${data.name}
+  data_file_path: '${data.paths.data_file_path}'
+  metadata_file_path: '${data.paths.metadata_file_path}'
+  encoding_method: 'one_hot_encoding'
+  random_seed: 42
+  train_proportion: 0.87
+
+# Paths:
+paths:
+  # Dataset paths:
+  data_dir_path: 'data/${data.name}/raw-data'
+  data_file_path: '${data.paths.data_dir_path}/bank-full.csv'
+  metadata_file_path: '${data.paths.data_dir_path}/bank.metadata.csv'
+  # Constraints paths:
+  constraints_dir_path: 'data/${data.name}/mined-constraints'
+  raw_dcs_out_path: '${data.paths.constraints_dir_path}/bank-11cols__DC_threshold=0.01__fastadc_dcs.txt'
+  evaluated_dcs_out_path: '${data.paths.constraints_dir_path}/bank-11cols__DC_threshold=0.01__fastadc_dcs__eval.csv'

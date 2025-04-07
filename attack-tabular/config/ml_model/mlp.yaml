@@ -1,0 +1,15 @@
+model_type: 'mlp'
+
+# Path to load model from; in case opf training it's the path to save the model to.
+model_artifact_path: 'trained-models/${data.name}-${ml_model.model_type}.ckpt'
+
+# Whether to re-train the model or not.
+perform_training: ${perform_training}
+perform_grid_search_hparams: ${perform_training_grid_search_hparams}  # whether to grid-search over multiple training runs.
+
+# Default parameters; in case a grid search is _not_ performed
+default_hparams:
+  n_layers: 3
+  hidden_dim: 128
+  lr: 1e-3
+  weight_decay: 1e-5

@@ -1,0 +1,12 @@
+﻿feature_name,type,range,dc-mining-type,info
+UrlLength,ordinal,"[0,'inf']",integer,COUNTER: Counts the total characters in the webpage URL
+NumNumericChars,ordinal,"[0,'inf']",integer,COUNTER: Counts the number of numeric characters in the webpage URL
+NumSensitiveWords,ordinal,"[0,'inf']",integer,COUNTER: Counts the number of sensitive words
+PctExtHyperlinks,continuous,"[0,1]",double,RATE: Counts the percentage of external hyperlinks in webpage HTML source code
+PctNullSelfRedirectHyperlinks,continuous,"[0,1]",double,"RATE [0,1]: Counts the percentage of hyperlinks fields containing empty value"
+FrequentDomainNameMismatch,categorical,"",string,"BINARY {0,1}: Checks if the most frequent domain name in HTML source code does not match the webpage URL domain name"
+SubmitInfoToEmail,categorical,"",string,"BINARY {0,1}: Check if HTML source code contains the HTML “mailto” function."
+PctExtResourceUrlsRT,categorical,"[-1,1]",string,"~CATEGORICAL [-1,0,1]: Counts the percentage of external resource URLs in webpage HTML source code."
+ExtMetaScriptLinkRT,categorical,"[-1,1]",string,"~CATEGORICAL: Counts percentage of meta, script and link tags containing external URL in the attributes."
+PctExtNullSelfRedirectHyperlinksRT,categorical,"[-1,1]",string,"CATEGORICAL: Counts the percentage of hyperlinks in HTML source code that uses different domain names, starts with “#”, or using “JavaScript ::void(0)”."
+CLASS_LABEL,label,,,

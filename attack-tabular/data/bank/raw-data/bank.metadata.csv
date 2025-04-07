@@ -1,0 +1,13 @@
+﻿feature_name,type,range,dc-mining-type
+duration,ordinal,"[0,'inf']",integer
+balance,continuous,"['-inf','inf']",integer
+age,continuous,"[0,150]",integer
+poutcome,categorical,"",string
+job,categorical,"",string
+pdays,ordinal,"[0,'inf']",integer
+campaign,ordinal,"[0,'inf']",integer
+contact,categorical,,string
+previous,ordinal,"[0,300]",integer
+education,categorical,"[0,3]",integer
+marital,categorical,,string
+y,label,,

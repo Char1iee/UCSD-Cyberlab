@@ -1,0 +1,30 @@
+constrainer_params:
+  evaluated_dcs_out_path: ${data.paths.evaluated_dcs_out_path}
+  n_dcs: 5000
+  n_tuples: 1
+  limit_cost_ball: True
+  cost_ball_eps: 0.03333333333333333
+
+projector_params:
+  upper_projection_budget_bound: 0.5
+
+
+mining_params:
+  # Re-execute constraints mining and its violation parameter
+  perform_constraints_mining: ${perform_constraints_mining}
+
+  # Re-execute raw constraints evaluation and its parameters
+  perform_constraints_ranking: ${perform_constraints_ranking}  # must be True if `perform_constraints_mining` is True
+
+  # Paths to load/save the mined constraints from/to.
+  raw_dcs_out_path: ${data.paths.raw_dcs_out_path}
+  evaluated_dcs_out_path: ${data.paths.evaluated_dcs_out_path}
+
+  # Mining hyperparameters
+  approx_violation_threshold: 0.01
+  path_to_fastadc_miner_jar: 'src/constraints/mining/resources/FastADC-1.0-SNAPSHOT.jar'
+
+  # Ranking hyperparameters
+  n_dcs_to_eval: 10_000  # number of dcs to evaluate
+  n_tuples_to_eval: 1000  # number of samples to evaluate on; also the amount of other tuples to save in the evaluation file
+  n_other_tuples_to_eval: 8_000  # number of other tuples to evaluate

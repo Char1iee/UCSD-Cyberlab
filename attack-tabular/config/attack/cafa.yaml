@@ -1,0 +1,10 @@
+attack_name: cafa
+
+random_init: True
+random_seed:
+
+max_iter: 250
+max_iter_tabpgd: 100
+eps: 0.03333333333333333
+step_size: 0.0003333333333333333
+perturb_categorical_each_steps: 10
